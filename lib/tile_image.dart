@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class TileImage extends StatelessWidget {
-  const TileImage({Key key, this.fileUrl}) : super(key: key);
+  const TileImage({Key? key, required this.fileUrl}) : super(key: key);
   final String fileUrl;
 
   @override
