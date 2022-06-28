@@ -1,6 +1,6 @@
-# subsampling
+# image_tile
 
-Flutter Subsampling Image
+Flutter Image Tile
 
 ## Getting Started
 

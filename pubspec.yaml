@@ -1,5 +1,5 @@
-name: subsampling
-description: Flutter Subsampling Image
+name: image_tile
+description: Flutter Image Tile
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
