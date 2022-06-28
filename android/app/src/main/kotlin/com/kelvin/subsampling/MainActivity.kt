@@ -6,7 +6,6 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity: FlutterActivity() {
-    private val CHANNEL = "image_subSample"
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         flutterEngine
             .platformViewsController
