@@ -26,7 +26,7 @@ internal class NativeView(
     init {
         view = SubsamplingScaleImageView(context)
         creationParams?.get("image")?.let {
-            view.setImage(ImageSource.asset("sample.png"))
+            view.setImage(ImageSource.fileUrl(it as String))
         }
     }
 }

@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+class TileImage extends StatelessWidget {
+  const TileImage({Key key, this.fileUrl}) : super(key: key);
+  final String fileUrl;
 
   @override
   Widget build(BuildContext context) {
     const String viewType = 'SubSampleImage';
-    final Map<String, dynamic> creationParams = <String, dynamic>{'image': Uri.parse('assets/sample.jpg').path};
+    final Map<String, dynamic> creationParams = <String, dynamic>{'image': fileUrl};
     return AndroidView(
       viewType: viewType,
       layoutDirection: TextDirection.ltr,
