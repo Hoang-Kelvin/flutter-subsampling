@@ -1,4 +1,4 @@
-package com.example.image_tile_example
+package com.example.image_tile
 
 import android.content.Context
 import io.flutter.plugin.common.StandardMessageCodec

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:image_tile/image_tile.dart';
 
 void main() {
@@ -16,14 +14,34 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String url = '';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('SubSampleImage'),
+          title: const Text('Demo ImageTile'),
         ),
-        body: TileImage(fileUrl: ''),
+        body: url.isNotEmpty
+            ? ImageTile(fileUrl: url, callback: (_) {})
+            : Container(
+                color: Colors.blue,
+              ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            ImagePicker().pickImage(source: ImageSource.gallery).then((value) {
+              setState(() {
+                url = value?.path ?? '';
+              });
+            });
+          },
+          backgroundColor: Colors.white,
+          child: const Icon(
+            Icons.add,
+            color: Colors.black,
+          ),
+        ),
       ),
     );
   }

@@ -47,4 +47,5 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
 }

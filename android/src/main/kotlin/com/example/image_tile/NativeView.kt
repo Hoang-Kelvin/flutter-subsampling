@@ -1,6 +1,7 @@
-package com.example.image_tile_example
+package com.example.image_tile
 
 import android.content.Context
+import android.util.Log
 import android.view.View
 import com.davemorrissey.labs.subscaleview.ImageSource
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
@@ -23,7 +24,8 @@ internal class NativeView(
     init {
         view = SubsamplingScaleImageView(context)
         creationParams?.get("image")?.let {
-            view.setImage(ImageSource.fileUrl(it as String))
+            Log.e("image_url", it as String)
+            view.setImage(ImageSource.uri(it))
         }
     }
 }
